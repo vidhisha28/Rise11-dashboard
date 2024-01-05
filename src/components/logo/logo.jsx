@@ -93,3 +93,18 @@ Logo.propTypes = {
 };
 
 export default Logo;
+
+// import React from 'react';
+// import logo from './assets/images/logo1.PNG'; // Adjust the path based on your file structure
+
+// function App() {
+//   return (
+//     <div className="App">
+//       {/* Other components or content */}
+//       {/* <img src={logo} alt="My Logo" /> */}
+//       <img src={logo} alt="My Logo" style={{ width: '100px', height: 'auto' }} />
+//     </div>
+//   );
+// }
+
+// export default App;

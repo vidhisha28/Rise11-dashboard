@@ -1,11 +1,14 @@
 import PropTypes from 'prop-types';
-
+import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-import { useTheme } from '@mui/material/styles';
 import IconButton from '@mui/material/IconButton';
+import Button from '@mui/material/Button';
+import MessageIcon from '@mui/icons-material/Message';
+import UploadIcon from '@mui/icons-material/Upload';
+import ShowChartIcon from '@mui/icons-material/ShowChart';
 
 import { useResponsive } from 'src/hooks/use-responsive';
 
@@ -14,10 +17,10 @@ import { bgBlur } from 'src/theme/css';
 import Iconify from 'src/components/iconify';
 
 import Searchbar from './common/searchbar';
-import { NAV, HEADER } from './config-layout';
 import AccountPopover from './common/account-popover';
-import LanguagePopover from './common/language-popover';
 import NotificationsPopover from './common/notifications-popover';
+
+import { NAV, HEADER } from './config-layout';
 
 // ----------------------------------------------------------------------
 
@@ -39,10 +42,25 @@ export default function Header({ onOpenNav }) {
       <Box sx={{ flexGrow: 1 }} />
 
       <Stack direction="row" alignItems="center" spacing={1}>
-        <LanguagePopover />
-        <NotificationsPopover />
-        <AccountPopover />
-      </Stack>
+  {/* New Upload Button (non-clickable) */}
+  <Button sx={{ backgroundColor: 'orange', cursor: 'default' }}>
+  <UploadIcon sx={{ width: '24px', height: '24px', color: 'white' }} />
+  New Upload
+</Button>
+
+  {/* Message Icon */}
+  <IconButton /* Add onClick if needed */>
+  <MessageIcon />
+</IconButton>
+
+  {/* Statistics Icon */}
+  <IconButton /* Add onClick if needed */>
+  <ShowChartIcon />
+</IconButton>
+  
+  <NotificationsPopover />
+  <AccountPopover />
+</Stack>
     </>
   );
 

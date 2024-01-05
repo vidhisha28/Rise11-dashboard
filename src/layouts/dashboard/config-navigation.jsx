@@ -1,4 +1,11 @@
 import SvgColor from 'src/components/svg-color';
+import MessageIcon from '@mui/icons-material/Message';
+import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
+import ImportContactsIcon from '@mui/icons-material/ImportContacts';
+import QuizIcon from '@mui/icons-material/Quiz';
+import QueryStatsIcon from '@mui/icons-material/QueryStats';
+import WalletIcon from '@mui/icons-material/Wallet';
+import AccountBoxIcon from '@mui/icons-material/AccountBox';
 
 // ----------------------------------------------------------------------
 
@@ -8,34 +15,44 @@ const icon = (name) => (
 
 const navConfig = [
   {
-    title: 'dashboard',
+    title: 'MyCourse',
     path: '/',
     icon: icon('ic_analytics'),
   },
   {
-    title: 'user',
+    title: 'Calendar',
     path: '/user',
-    icon: icon('ic_user'),
+    icon: <CalendarTodayIcon/>,
   },
   {
-    title: 'product',
+    title: 'Resource',
     path: '/products',
-    icon: icon('ic_cart'),
+    icon: <ImportContactsIcon/>,
   },
   {
-    title: 'blog',
+    title: 'Quiz',
     path: '/blog',
-    icon: icon('ic_blog'),
+    icon: <QuizIcon/>,
   },
   {
-    title: 'login',
+    title: 'Message',
     path: '/login',
-    icon: icon('ic_lock'),
+    icon: <MessageIcon />,
   },
   {
-    title: 'Not found',
+    title: 'MyStatus',
     path: '/404',
-    icon: icon('ic_disabled'),
+    icon: <QueryStatsIcon/>,
+  },
+  {
+    title: 'Wallet',
+    path: '/404',
+    icon: <WalletIcon/>,
+  },
+  {
+    title: 'MyAccount',
+    path: '/404',
+    icon: <AccountBoxIcon/>,
   },
 ];
 
